@@ -9,7 +9,6 @@ class Member_skill_data extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
         'user_id',
         'skillName',

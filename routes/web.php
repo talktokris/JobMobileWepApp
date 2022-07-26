@@ -35,6 +35,25 @@ require __DIR__.'/auth.php';
 Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/admin/dashboard', [App\Http\Controllers\Admin\DashboradController::class, 'index'])->name('admin-home');
+    Route::get('/admin/resumes/search', [App\Http\Controllers\Admin\ResumeController::class, 'search'])->name('admin-resume-search');
+    Route::get('/admin/resumes/recent', [App\Http\Controllers\Admin\ResumeController::class, 'recent'])->name('admin-resume-recent');
+    Route::get('/admin/resumes/view/{hash_id}', [App\Http\Controllers\Admin\ResumeController::class, 'view'])->name('admin-resume-view');
+
+    Route::get('/admin/jobs/create-job', [App\Http\Controllers\Admin\JobsController::class, 'store'])->name('admin-create-job');
+    Route::get('/admin/jobs/jobs-search', [App\Http\Controllers\Admin\JobsController::class, 'search'])->name('admin-jobs-search');
+    Route::get('/admin/message/send', [App\Http\Controllers\Admin\MessageController::class, 'send'])->name('admin-message-send');
+    Route::get('/admin/message/list', [App\Http\Controllers\Admin\MessageController::class, 'list'])->name('admin-message-list');
+    Route::get('/admin/track-messages', [App\Http\Controllers\Admin\MessageController::class, 'track'])->name('admin-message-track');
+    Route::get('/admin/create-user', [App\Http\Controllers\Admin\UserAdminController::class, 'store'])->name('admin-create-user');
+    Route::get('/admin/users/search', [App\Http\Controllers\Admin\UserAdminController::class, 'search'])->name('admin-users-search');
+    Route::get('/admin/setting/countries', [App\Http\Controllers\Admin\SettingController::class, 'countries'])->name('admin-countries');
+    Route::get('/admin/setting/education-level', [App\Http\Controllers\Admin\SettingController::class, 'educationLevel'])->name('admin-education-level');
+    Route::get('/admin/setting/experience-level', [App\Http\Controllers\Admin\SettingController::class, 'experienceLevel'])->name('admin-experience-level');
+    Route::get('/admin/setting/skill-level', [App\Http\Controllers\Admin\SettingController::class, 'skillLevel'])->name('admin-skill-level');
+    Route::get('/admin/setting/language', [App\Http\Controllers\Admin\SettingController::class, 'language'])->name('admin-language');
+    Route::get('/admin/setting/language-level', [App\Http\Controllers\Admin\SettingController::class, 'languageLevel'])->name('admin-language-level');
+
+
    /*
     Route::match(array('GET','POST'),'/admin/create-news-post', [App\Http\Controllers\Admin\AdminNewsController::class, 'createNewsPost'])->name('create-new-post');
     Route::get('/admin/search-news-posts', [App\Http\Controllers\Admin\AdminNewsController::class, 'searchNewsPosts'])->name('search-news-post');

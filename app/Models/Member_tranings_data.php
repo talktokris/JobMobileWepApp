@@ -12,10 +12,14 @@ class Member_tranings_data extends Model
 
     protected $fillable = [
         'user_id',
-        'language_name',
-        'language_level',
+        'name',
+        'org',
+        'country',
+        'startDate',
+        'endDate',
         'status'
     ];
+
 
     public function getMemberInfo(){
 

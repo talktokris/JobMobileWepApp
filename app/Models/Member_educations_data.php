@@ -9,6 +9,7 @@ class Member_educations_data extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
         'user_id',
         'level',

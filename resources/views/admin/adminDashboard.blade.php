@@ -30,7 +30,7 @@
     								<hr>
     								<h2  style="text-align:center;">to</h2>
     								<hr>
-    								<h3  style="text-align:center;">Shree Collage Backend Panel</h3>
+    								<h3  style="text-align:center;">Job Agency Backend Panel</h3>
 
     							</div>
     						</div>
