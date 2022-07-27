@@ -96,7 +96,7 @@
                                         elseif($statusValue==0){ $statusSting='<span class="badge bg-secondary">Not Active</span>';}?>
                                 <tr>
                                     <td style=""> {{ $item->id}}</td>
-                                     <td style="text-align: center;"><img src="<?php echo $news_image ;?>"  style="width: 100px;" ></td>
+                                    <td style="text-align: center;"><a href="<?php echo url('/admin/resumes/view').'/'. base64_encode($item->id) ;?>"><img src="<?php echo $news_image ;?>"  style="width: 100px;" ></a></td>
                                     <td style=""> {{ $item->name}}</td>
                                     <td style=""> {{ $item->email}}</td>
                                     <td style=""> {{ $item->sex}}</td>

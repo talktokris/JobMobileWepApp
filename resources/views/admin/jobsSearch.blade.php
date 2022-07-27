@@ -89,10 +89,10 @@
 
                                          $statusValue=$item->status;
                                         if($statusValue==1){ $statusSting='<span class="badge bg-success">Active</span>';}
-                                        elseif($statusValue==0){ $statusSting='<span class="badge bg-secondary">Not Active</span>';}?>
+                                        elseif($statusValue==0){ $statusSting='<span class="badge bg-secondary">Not Active</span>';} ?>
                                 <tr>
-                                    <td style="text-align: center;"><img src="<?php echo $news_image ;?>"  style="width: 200px;" ></br>
-                                        <a href="{{ url('/admin/news-image-upload')}}/{{ base64_encode($item->id) }}" class="btn btn-warning" style="margin: 1em;">Change Image</a></td>
+                                    <td style="text-align: center;"><a href="<?php echo url('/admin/jobs/jobs-view/').'/'. base64_encode($item->id) ;?>"><img src="<?php echo $news_image ;?>"  style="width: 200px;" ></a><br/>
+                                        <a href="{{ url('/admin/jobs-image-upload')}}/{{ base64_encode($item->id) }}" class="btn btn-warning" style="margin: 1em;">Change Image</a></td>
                                     <td style=""><h5>{{ $item->title}}</h5>
                                         {{ $item->subTitle}}<br>
                                        <strong> Type : </strong>{{ $item->jobCategory}}<br>
@@ -104,9 +104,9 @@
 
                                     <td><?php echo $statusSting;?></td>
 
-                                 <td><a href="<?php echo url('/admin/news/edit/').'/'. base64_encode($item->id) ;?>" class="btn btn-success"><i class="bx bx-show"></i></a></td>
-                                 <td><a href="<?php echo url('/admin/news/edit/').'/'. base64_encode($item->id) ;?>" class="btn btn-warning"><i class="bx bx-pencil"></i></a></td>
-                                 <td><a href="<?php echo url('/admin/news/delete/').'/'. base64_encode($item->id) ;?>" class="btn btn-danger"><i class="bx bx-trash"></i></a></td>
+                                 <td><a href="<?php echo url('/admin/jobs/jobs-view').'/'. base64_encode($item->id) ;?>" class="btn btn-success"><i class="bx bx-show"></i></a></td>
+                                 <td><a href="<?php echo url('/admin/jobs/edit').'/'. base64_encode($item->id) ;?>" class="btn btn-warning"><i class="bx bx-pencil"></i></a></td>
+                                 <td><a href="<?php echo url('/admin/jobs/delete').'/'. base64_encode($item->id) ;?>" class="btn btn-danger"><i class="bx bx-trash"></i></a></td>
                                  <?php /*    <td style="">{{ $item->updated_at->diffForHumans()  }}</td> */?>
 
                                 </tr>
@@ -121,7 +121,7 @@
 
                                         <th>View</th>
                                         <th>Edit</th>
-                                        <th>Delete</th>th>
+                                        <th>Delete</th>
 
 									</tr>
 								</tfoot>

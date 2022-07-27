@@ -9,14 +9,64 @@ class Job_ads_list extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
-        'user_id',
-        'job_ads_id',
-        'responce_status',
+        'title',
+        'subTitle',
+        'vacancies',
+        'currency',
+        'salleryMin',
+        'salleryMax',
+        'jobCategory',
+        'education',
+        'skillRequire',
+        'location',
+        'date_expire',
+        'fav',
+        'image',
         'status',
 
     ];
 
+    public function getJobDescription(){
+
+        return $this->hasMany(Job_ads_job_description::class, 'job_ads_id', 'id');
+
+    }
+
+    public function getJobSpecification(){
+
+        return $this->hasMany(Job_ads_job_specification::class, 'job_ads_id', 'id');
+
+    }
+
+    public function getFavList(){
+
+        return $this->hasMany(Member_favorite_job::class, 'job_ads_id', 'id');
+
+    }
+
+
+    public function getFavInfo(){
+
+        return $this->hasMany(Member_favorite_job::class, 'job_ads_id', 'id');
+
+    }
+
+    public function getJobApplyUsers(){
+
+        return $this->hasMany(Job_apply_list::class, 'job_ads_id', 'id');
+
+    }
+
+    public function appliedMember(){
+
+        return $this->hasMany(Job_apply_list::class, 'job_ads_id', 'id');
+
+    }
+
+
+    /*
     public function getApplyIdInfo(){
 
         return $this->belongsTo(User::class, 'user_id', 'id');
@@ -29,4 +79,5 @@ class Job_ads_list extends Model
         return $this->belongsTo(Job_ads_list::class, 'job_ads_id', 'id');
 
     }
+    */
 }

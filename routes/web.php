@@ -39,8 +39,22 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/resumes/recent', [App\Http\Controllers\Admin\ResumeController::class, 'recent'])->name('admin-resume-recent');
     Route::get('/admin/resumes/view/{hash_id}', [App\Http\Controllers\Admin\ResumeController::class, 'view'])->name('admin-resume-view');
 
+    Route::match(array('GET','POST'),'/admin/jobs/create-job', [App\Http\Controllers\Admin\JobsController::class, 'store'])->name('create-jobs-post');
+    Route::get('/admin/jobs/delete/{hash_id}', [App\Http\Controllers\Admin\JobsController::class, 'delete'])->name('delete-jobs-post');
+    Route::match(array('GET','POST'),'/admin/jobs/edit/{hash_id}', [App\Http\Controllers\Admin\JobsController::class, 'edit'])->name('edit-jobs-post');
+    Route::match(array('GET','POST'),'/admin/jobs-image-upload/{hash_id}', [App\Http\Controllers\Admin\JobsController::class, 'imageUpload'])->name('jobs-image-upload');
+
     Route::get('/admin/jobs/create-job', [App\Http\Controllers\Admin\JobsController::class, 'store'])->name('admin-create-job');
     Route::get('/admin/jobs/jobs-search', [App\Http\Controllers\Admin\JobsController::class, 'search'])->name('admin-jobs-search');
+    Route::get('/admin/jobs/jobs-view/{hash_id}', [App\Http\Controllers\Admin\JobsController::class, 'view'])->name('admin-jobs-view');
+
+    Route::match(array('GET','POST'),'/admin/jobs/jobs-description/{hash_id}', [App\Http\Controllers\Admin\JobsController::class, 'jobDescriptionStore'])->name('create-jobs-description');
+    Route::get('/admin/jobs-description/delete/{hash_id}/{del_id}', [App\Http\Controllers\Admin\JobsController::class, 'deleteDescription'])->name('delete-jobs-delete-description');
+
+    Route::match(array('GET','POST'),'/admin/jobs/jobs-specification/{hash_id}', [App\Http\Controllers\Admin\JobsController::class, 'jobSpecificationStore'])->name('create-jobs-specification');
+    Route::get('/admin/jobs-specification/delete/{hash_id}/{del_id}', [App\Http\Controllers\Admin\JobsController::class, 'deleteSpecification'])->name('delete-jobs-delete-specification');
+
+
     Route::get('/admin/message/send', [App\Http\Controllers\Admin\MessageController::class, 'send'])->name('admin-message-send');
     Route::get('/admin/message/list', [App\Http\Controllers\Admin\MessageController::class, 'list'])->name('admin-message-list');
     Route::get('/admin/track-messages', [App\Http\Controllers\Admin\MessageController::class, 'track'])->name('admin-message-track');

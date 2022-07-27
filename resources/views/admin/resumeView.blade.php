@@ -73,7 +73,7 @@
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                         <h6 class="mb-0">Weight</h6>
-                                        <span class="text-secondary">{{ $item->weight}}</span>
+                                        <span class="text-secondary"><?php if($item->weight>=1){ echo $item->weight . " Kg";} ?></span>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                                         <h6 class="mb-0">Country Live In</h6>
@@ -307,7 +307,7 @@
                               @foreach ($item->getTranings as $trn)
                                 <div class="row">
                                     <div class="col-sm-3">
-                                        <p class="mb-0" style="font-weight: 600;">Training Level</p>
+                                        <p class="mb-0" style="font-weight: 600;">Training Name </p>
                                     </div>
                                     <div class="col-sm-9 text-secondary">
                                       <p>{{ $trn->name}}</p>
