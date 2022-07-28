@@ -49,7 +49,7 @@
 
         </ul>
     </li>
-
+<?php /*
     <li>
         <a href="javascript:;" class="has-arrow">
             <div class="parent-icon"><i class='bx bx-message-rounded'></i>
@@ -66,6 +66,7 @@
 
         </ul>
     </li>
+    */ ?>
     <li>
         <a href="javascript:;" class="has-arrow">
             <div class="parent-icon"><i class='bx bx-user'></i>
