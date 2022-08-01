@@ -65,12 +65,11 @@
 									<tr>
 										<th>ID</th>
 										<th>Name</th>
-                                        <th>User Type</th>
 
-                                        <th>Contact No</th>
                                         <th>Email</th>
                                         <th>Role</th>
                                         <th>Status</th>
+                                        <th>Edit</th>
                                         <th>Created</th>
 
 									</tr>
@@ -95,11 +94,10 @@
                                 <tr>
                                     <td style="text-align: center;">{{ $item->id}}</td>
                                     <td style="">{{ $item->name}}</td>
-                                    <td>{{ $item->profile_type}}</td>
-                                    <td>{{ $item->mobileNo}}</td>
                                     <td style="">{{ $item->email}}</td>
                                     <td style=""><?php echo $roleSting;?></td>
                                     <td><?php echo $statusSting;?></td>
+                                 <td><a href="<?php echo url('/admin/user/edit').'/'. base64_encode($item->id) ;?>" class="btn btn-warning"><i class="bx bx-pencil"></i></a></td>
                                  <td style="">{{ $item->created_at->diffForHumans()  }}</td>
                                  <?php /*    <td style="">{{ $item->updated_at->diffForHumans()  }}</td> */?>
 
@@ -111,11 +109,10 @@
 									<tr>
                                         <th>ID</th>
 										<th>Name</th>
-                                        <th>User Type</th>
                                         <th>Email</th>
-                                        <th>Contact No</th>
                                         <th>Role</th>
                                         <th>Status</th>
+                                        <th>Edit</th>
                                         <th>Created</th>
 
 									</tr>

@@ -45,19 +45,21 @@
                 <img src="https://via.placeholder.com/110x110" class="user-img" alt="user avatar">
                 <div class="user-info ps-3">
                     <p class="user-name mb-0">{{ Auth::User()->name }}</p>
-                    <?php if(Auth::User()->role==1){ $roleString ='Web User';}
+                    <?php if(Auth::User()->role==1){ $roleString ='Admin User';}
                     elseif(Auth::User()->role==2){ $roleString ='Staff User';}
-                    elseif(Auth::User()->role==3){ $roleString ='Admin User';}
+                    elseif(Auth::User()->role==3){ $roleString ='Web User';}
                     else{ $roleString ='Pending User';}
                  ?>
                     <p class="designattion mb-0">{{ $roleString }}</p>
                 </div>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
+                <?php /*
                 <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-user"></i><span>Profile</span></a>
                 </li>
                 <li><a class="dropdown-item" href="javascript:;"><i class="bx bx-lock"></i><span>Change Password</span></a>
                 </li>
+                */ ?>
 
                 <li>
                     <div class="dropdown-divider mb-0"></div>

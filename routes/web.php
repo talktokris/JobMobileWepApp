@@ -60,7 +60,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/message/send', [App\Http\Controllers\MessageController::class, 'send'])->name('admin-message-send');
     Route::get('/admin/message/list', [App\Http\Controllers\MessageController::class, 'list'])->name('admin-message-list');
     Route::get('/admin/track-messages', [App\Http\Controllers\MessageController::class, 'track'])->name('admin-message-track');
-    Route::get('/admin/create-user', [App\Http\Controllers\UserAdminController::class, 'store'])->name('admin-create-user');
+
+    Route::match(array('GET','POST'),'/admin/create-user', [App\Http\Controllers\UserAdminController::class, 'store'])->name('admin-create-user');
+    Route::match(array('GET','POST'),'/admin/user/edit/{hash_id}', [App\Http\Controllers\UserAdminController::class, 'edit'])->name('admin-edit-user');
+
+
     Route::get('/admin/users/search', [App\Http\Controllers\UserAdminController::class, 'search'])->name('admin-users-search');
     Route::get('/admin/setting/countries', [App\Http\Controllers\SettingController::class, 'countries'])->name('admin-countries');
     Route::get('/admin/setting/education-level', [App\Http\Controllers\SettingController::class, 'educationLevel'])->name('admin-education-level');
