@@ -17,10 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-*/
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+
+*/
 
 
 
@@ -33,6 +37,11 @@ require __DIR__.'/auth.php';
 
 
  Route::get('/', [App\Http\Controllers\PagesController::class, 'index'])->name('landing-page');
+ Route::get('/privacy-policy', [App\Http\Controllers\PagesController::class, 'privacy'])->name('privacy-page');
+
+
+ //Route::get('/admin/message', [App\Http\Controllers\MessageController::class, 'setMessage'])->name('set-message-push');
+
 
 Route::group(['middleware' => ['auth']], function () {
 
@@ -56,9 +65,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::match(array('GET','POST'),'/admin/jobs/jobs-specification/{hash_id}', [App\Http\Controllers\JobsController::class, 'jobSpecificationStore'])->name('create-jobs-specification');
     Route::get('/admin/jobs-specification/delete/{hash_id}/{del_id}', [App\Http\Controllers\JobsController::class, 'deleteSpecification'])->name('delete-jobs-delete-specification');
 
-
-    Route::get('/admin/message/send', [App\Http\Controllers\MessageController::class, 'send'])->name('admin-message-send');
-    Route::get('/admin/message/list', [App\Http\Controllers\MessageController::class, 'list'])->name('admin-message-list');
+    Route::match(array('GET','POST'),'/admin/message/send/{hash_id}', [App\Http\Controllers\MessageController::class, 'send'])->name('admin-message-send');
+   // Route::get('/admin/message/list', [App\Http\Controllers\MessageController::class, 'list'])->name('admin-message-list');
     Route::get('/admin/track-messages', [App\Http\Controllers\MessageController::class, 'track'])->name('admin-message-track');
 
     Route::match(array('GET','POST'),'/admin/create-user', [App\Http\Controllers\UserAdminController::class, 'store'])->name('admin-create-user');

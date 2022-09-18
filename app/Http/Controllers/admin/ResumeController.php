@@ -40,7 +40,7 @@ class ResumeController extends Controller
 
 
 
-        $data= User::where([['id','=',$id],['status','=',1]])->with('getEducation')->with('getExperiences')->with('getJobPreferences')->with('getTranings')->with('getSkill')->with('getLanguages')->get();
+        $data= User::where([['id','=',$id],['status','=',1]])->with('getEducation')->with('getExperiences')->with('getJobPreferences')->with('getTranings')->with('getSkill')->with('getLanguages')->with('getPushMessages')->get();
       // return $data;
      return view("admin.resumeView")->with(compact("data"));
 

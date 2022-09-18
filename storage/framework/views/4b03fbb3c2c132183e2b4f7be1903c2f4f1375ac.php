@@ -1,0 +1,2 @@
+<p class="mb-0">Copyright © <?php echo date("Y") ;?>. All right reserved.</p>
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/prabhu_jobs/web-app/job-web-app/resources/views/admin/layouts/footer.blade.php ENDPATH**/ ?>

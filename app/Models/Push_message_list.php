@@ -22,7 +22,7 @@ class Push_message_list extends Model
 
     public function geMessageIdInfo(){
 
-        return $this->belongsTo(User::class, 'id', 'user_id');
+        return $this->belongsTo(User::class, 'user_id', 'id');
 
     }
 }

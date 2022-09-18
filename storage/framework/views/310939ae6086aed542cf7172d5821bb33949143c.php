@@ -1,7 +1,4 @@
-@extends('public.layouts.master')
-
-
-@section('contents')
+<?php $__env->startSection('contents'); ?>
 Í
 
         <!-- INTRO -->
@@ -15,7 +12,7 @@
                         <div class="row">
                             <div class="col-md-10">
                                 <div class="intro-box">
-                                    <img src="{{ asset('assets/front/images/icons/05.png') }}" alt="icon" />
+                                    <img src="<?php echo e(asset('assets/front/images/icons/05.png')); ?>" alt="icon" />
                                     <div>
                                         <h4>Job Agency mobile application</h4>
                                         <p>Get contacted by top companies hiring on Job Agency mobile application!
@@ -24,7 +21,7 @@
                                     </div>
                                 </div>
                                 <div class="intro-box">
-                                    <img src="{{ asset('assets/front/images/icons/06.png') }}" alt="icon" />
+                                    <img src="<?php echo e(asset('assets/front/images/icons/06.png')); ?>" alt="icon" />
                                     <div>
                                         <h4>Dream Career</h4>
                                         <p>Your chance to build that dream career is here. Get contacted by top
@@ -32,9 +29,9 @@
                                     </div>
                                 </div>
                                 <div class="space50"></div>
-                                <a href="#" class="footer-storeicon"><img src="{{ asset('assets/front/images/icons/app-store.svg')}}" alt="logo"
+                                <a href="#" class="footer-storeicon"><img src="<?php echo e(asset('assets/front/images/icons/app-store.svg')); ?>" alt="logo"
                                         width="150"></a>
-                                <a href="#" class="footer-storeicon"><img src="{{ asset('assets/front/images/icons/google-play.svg')}}" alt="logo"
+                                <a href="#" class="footer-storeicon"><img src="<?php echo e(asset('assets/front/images/icons/google-play.svg')); ?>" alt="logo"
                                         width="150"></a>
 
 
@@ -44,7 +41,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-6 no-padding">
-                        <img src="{{ asset('assets/front/images/home/01.png') }}" class="img-responsive center-block" alt="home">
+                        <img src="<?php echo e(asset('assets/front/images/home/01.png')); ?>" class="img-responsive center-block" alt="home">
                     </div>
                 </div>
             </div>
@@ -69,7 +66,7 @@
                             <div class="col-md-4 pt-150">
                                 <div class="text-center">
                                     <div class="services-content">
-                                        <img src="{{ asset('assets/front/images/icons/01.png') }}" alt="icon" />
+                                        <img src="<?php echo e(asset('assets/front/images/icons/01.png')); ?>" alt="icon" />
                                         <h2>Easy Resume System </h2>
                                         <p>Create a free profile and let innovative companies apply to interview you.
                                             Digitally and free of charge - no cover letters required.</p>
@@ -79,7 +76,7 @@
                             <div class="col-md-4">
                                 <div class="text-center">
                                     <div class="services-content">
-                                        <img src="{{ asset('assets/front/images/icons/02.png') }}" alt="icon" />
+                                        <img src="<?php echo e(asset('assets/front/images/icons/02.png')); ?>" alt="icon" />
                                         <h2>All-in-One</h2>
                                         <p>All-in-One Recruiting Solution for Talent Acquisition and Relations</p>
                                     </div>
@@ -89,7 +86,7 @@
 
                                 <div class="text-center">
                                     <div class="services-content">
-                                        <img src="{{ asset('assets/front/images/icons/03.png') }}" alt="icon" />
+                                        <img src="<?php echo e(asset('assets/front/images/icons/03.png')); ?>" alt="icon" />
                                         <h2>Job offers</h2>
                                         <p>Employers can find you through matching-AI and contact you. Receive suitable
                                             job offers based on your skills with salary up front.</p>
@@ -100,7 +97,7 @@
                             <div class="col-md-4 pt-150">
                                 <div class="text-center">
                                     <div class="services-content">
-                                        <img src="{{ asset('assets/front/images/icons/04.png') }}" alt="icon" />
+                                        <img src="<?php echo e(asset('assets/front/images/icons/04.png')); ?>" alt="icon" />
                                         <h2>Talent Managers</h2>
                                         <p>Job Agency Talent Managers guide you through the entire process and help you
                                             negotiate offers and prepare for interviews.</p>
@@ -193,4 +190,6 @@
         </div>
     </div>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('public.layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/prabhu_jobs/web-app/job-web-app/resources/views/public/landingPage.blade.php ENDPATH**/ ?>

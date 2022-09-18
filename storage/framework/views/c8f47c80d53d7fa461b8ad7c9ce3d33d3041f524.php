@@ -1,6 +1,6 @@
 <div class="sidebar-header">
     <div>
-        <img src="{{ asset('assets/images/logo-icon.png') }}" class="logo-icon" alt="logo icon">
+        <img src="<?php echo e(asset('assets/images/logo-icon.png')); ?>" class="logo-icon" alt="logo icon">
     </div>
     <div>
         <h4 class="logo-text"> Job Agency</h4>
@@ -12,7 +12,7 @@
 <ul class="metismenu" id="menu">
 
 <li>
-        <a href="{{ url('/admin/dashboard') }}" >
+        <a href="<?php echo e(url('/admin/dashboard')); ?>" >
             <div class="parent-icon"><i class='bx bx-home-circle'></i>
             </div>
             <div class="menu-title">Dashboard</div>
@@ -25,8 +25,8 @@
             <div class="menu-title">Resumes</div>
         </a>
         <ul>
-            <li> <a href="{{ url('/admin/resumes/search') }}"><i class="bx bx-right-arrow-alt"></i>Resumes Search</a>
-                <li> <a href="{{ url('/admin/resumes/recent') }}"><i class="bx bx-right-arrow-alt"></i>Resumes Recent</a>
+            <li> <a href="<?php echo e(url('/admin/resumes/search')); ?>"><i class="bx bx-right-arrow-alt"></i>Resumes Search</a>
+                <li> <a href="<?php echo e(url('/admin/resumes/recent')); ?>"><i class="bx bx-right-arrow-alt"></i>Resumes Recent</a>
             </li>
             </li>
         </ul>
@@ -41,16 +41,16 @@
             <div class="menu-title">Jobs</div>
         </a>
         <ul>
-            <li> <a href="{{ url('/admin/jobs/jobs-search') }}"><i class="bx bx-right-arrow-alt"></i>Job Search</a>
+            <li> <a href="<?php echo e(url('/admin/jobs/jobs-search')); ?>"><i class="bx bx-right-arrow-alt"></i>Job Search</a>
             </li>
-            <li> <a href="{{ url('/admin/jobs/create-job') }}"><i class="bx bx-right-arrow-alt"></i>Create Job</a>
+            <li> <a href="<?php echo e(url('/admin/jobs/create-job')); ?>"><i class="bx bx-right-arrow-alt"></i>Create Job</a>
             </li>
 
 
         </ul>
     </li>
     <li>
-        <a href="{{ url('/admin/track-messages') }}" >
+        <a href="<?php echo e(url('/admin/track-messages')); ?>" >
             <div class="parent-icon"><i class='bx bx-message-rounded'></i>
             </div>
             <div class="menu-title">Messages</div>
@@ -65,9 +65,9 @@
             <div class="menu-title">Users</div>
         </a>
         <ul>
-            <li> <a href="{{ url('/admin/users/search') }}"><i class="bx bx-right-arrow-alt"></i>Serach Users</a>
+            <li> <a href="<?php echo e(url('/admin/users/search')); ?>"><i class="bx bx-right-arrow-alt"></i>Serach Users</a>
             </li>
-            <li> <a href="{{ url('/admin/create-user') }}"><i class="bx bx-right-arrow-alt"></i>Create New User</a>
+            <li> <a href="<?php echo e(url('/admin/create-user')); ?>"><i class="bx bx-right-arrow-alt"></i>Create New User</a>
             </li>
 
 
@@ -81,12 +81,12 @@
             <div class="menu-title">Settings</div>
         </a>
         <ul>
-            <li> <a href="{{ url('/admin/setting/countries') }}"><i class="bx bx-right-arrow-alt"></i>Countries</a></li>
-            <li> <a href="{{ url('/admin/setting/education-level') }}"><i class="bx bx-right-arrow-alt"></i>Education Level</a></li>
-            <li> <a href="{{ url('/admin/setting/experience-level') }}"><i class="bx bx-right-arrow-alt"></i>Experience Level</a></li>
-            <li> <a href="{{ url('/admin/setting/skill-level') }}"><i class="bx bx-right-arrow-alt"></i>Skill Level</a></li>
-            <li> <a href="{{ url('/admin/setting/language') }}"><i class="bx bx-right-arrow-alt"></i>Language</a></li>
-            <li> <a href="{{ url('/admin/setting/language-level') }}"><i class="bx bx-right-arrow-alt"></i>Language Level</a></li>
+            <li> <a href="<?php echo e(url('/admin/setting/countries')); ?>"><i class="bx bx-right-arrow-alt"></i>Countries</a></li>
+            <li> <a href="<?php echo e(url('/admin/setting/education-level')); ?>"><i class="bx bx-right-arrow-alt"></i>Education Level</a></li>
+            <li> <a href="<?php echo e(url('/admin/setting/experience-level')); ?>"><i class="bx bx-right-arrow-alt"></i>Experience Level</a></li>
+            <li> <a href="<?php echo e(url('/admin/setting/skill-level')); ?>"><i class="bx bx-right-arrow-alt"></i>Skill Level</a></li>
+            <li> <a href="<?php echo e(url('/admin/setting/language')); ?>"><i class="bx bx-right-arrow-alt"></i>Language</a></li>
+            <li> <a href="<?php echo e(url('/admin/setting/language-level')); ?>"><i class="bx bx-right-arrow-alt"></i>Language Level</a></li>
 
         </ul>
     </li>
@@ -107,3 +107,4 @@
 
 </ul>
 <!--end navigation-->
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/prabhu_jobs/web-app/job-web-app/resources/views/admin/layouts/sidebar.blade.php ENDPATH**/ ?>
